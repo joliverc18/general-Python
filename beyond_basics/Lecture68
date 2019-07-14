@@ -1,0 +1,10 @@
+temperatures = [10, -20, -289, 100]
+
+def writer(temperatures, filePath):
+  with open(filePath, "w") as myFile:
+    for t in temperatures:
+      if t > -273.15:
+        f = t* 9/5 + 32
+        myFile.write(str(f) + '\n')
+
+writer(temperatures, "example.txt")
